@@ -170,6 +170,56 @@ transition: transform 0.6s ease;
   transform: rotate(360deg);
 }
 
+/* floating cards */
+
+  .float-card {
+  position: absolute;
+  font size: 32px;
+  color: rgba (255 ,255 ,255 ,0.14);
+  pointer-events: none;
+  animation: floatUp 10s linear infinite;
+  }
+@keyframes floatUp {
+
+
+
+0% {
+
+transform: translateY(0px) rotate(0deg);
+
+opacity: 0;
+
+}
+
+
+
+10% {
+
+opacity: 0.2;
+
+}
+
+
+
+50% {
+
+opacity: 0.3;
+
+}
+
+
+
+100% {
+
+transform: translateY(-220px) rotate(20deg);
+
+opacity: 0;
+
+}
+
+
+
+}
 .hero-badge {
 
   display: inline-block;
@@ -711,7 +761,15 @@ footer a:hover {
 
 
 <header>
+<div class="float-card" style="left:10%; top:80%;">♠</div>
 
+<div class="float-card" style="left:20%; top:90%;">♥</div>
+
+<div class="float-card" style="right:15%; top:85%;">♦</div>
+
+<div class="float-card" style="right:25%; top:95%;">♣</div>
+
+<div class="float-card" style="left:50%; top:88%;">♠</div>
   <div class="hero">
 
     <img src="logo.png" alt="Motor Head Reds Logo" class="logo">
