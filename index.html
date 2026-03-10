@@ -4,533 +4,701 @@
 
 <head>
 
-  <meta charset="UTF-8" />
+<meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Motor Head Reds Poker Club</title>
+<title>Motor Head Reds Poker Club</title>
 
-  <style>
+<meta name="description" content="Motor Head Reds Poker Club. Low stakes Texas Hold'em, Omaha, tournaments, and live action games in West Alexandria, Ohio." />
 
-    * {
+<style>
 
-      margin: 0;
+* {
 
-      padding: 0;
+  box-sizing: border-box;
 
-      box-sizing: border-box;
+  margin: 0;
 
-    }
+  padding: 0;
 
+}
 
 
-    body {
 
-      font-family: Arial, Helvetica, sans-serif;
+html {
 
-      background: #080808;
+  scroll-behavior: smooth;
 
-      color: white;
+}
 
-      overflow-x: hidden;
 
-    }
 
+body {
 
+  font-family: Arial, Helvetica, sans-serif;
 
-    .hero {
+  background:
 
-      min-height: 100vh;
+    radial-gradient(circle at top, rgba(180, 0, 0, 0.14), transparent 28%),
 
-      position: relative;
+    linear-gradient(180deg, #050505 0%, #0d0d0d 45%, #060606 100%);
 
-      display: flex;
+  color: #f5f5f5;
 
-      align-items: center;
+  line-height: 1.6;
 
-      justify-content: center;
+}
 
-      padding: 40px 20px;
 
-      background:
 
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.80)),
+header {
 
-        url("https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&w=1600&q=80");
+  min-height: 100vh;
 
-      background-size: cover;
+  display: flex;
 
-      background-position: center;
+  align-items: center;
 
-    }
+  justify-content: center;
 
+  text-align: center;
 
+  padding: 40px 20px;
 
-    .floating-suit {
+  position: relative;
 
-      position: absolute;
+  overflow: hidden;
 
-      font-size: 28px;
+  border-bottom: 3px solid #b30000;
 
-      color: rgba(255,255,255,0.18);
+  background:
 
-      animation: float 6s ease-in-out infinite;
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.82)),
 
-      user-select: none;
+    url('https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
 
-    }
+}
 
 
 
-    .suit1 { top: 16%; left: 6%; animation-delay: 0s; }
+header::before {
 
-    .suit2 { top: 22%; left: 10%; animation-delay: 1s; }
+  content: "♠ ♥ ♦ ♣";
 
-    .suit3 { top: 20%; left: 2%; animation-delay: 2s; }
+  position: absolute;
 
-    .suit4 { bottom: 14%; right: 5%; animation-delay: 1.5s; }
+  top: 12%;
 
-    .suit5 { bottom: 18%; right: 9%; animation-delay: .5s; }
+  left: 6%;
 
-    .suit6 { bottom: 16%; right: 2%; animation-delay: 2.5s; }
+  font-size: 3.4rem;
 
+  letter-spacing: 18px;
 
+  color: rgba(255,255,255,0.08);
 
-    @keyframes float {
+  transform: rotate(-16deg);
 
-      0%, 100% { transform: translateY(0px); opacity: 0.20; }
+}
 
-      50% { transform: translateY(-12px); opacity: 0.40; }
 
-    }
 
+header::after {
 
+  content: "♣ ♦ ♥ ♠";
 
-    .card {
+  position: absolute;
 
-      position: relative;
+  bottom: 14%;
 
-      z-index: 2;
+  right: 6%;
 
-      width: 100%;
+  font-size: 3.4rem;
 
-      max-width: 900px;
+  letter-spacing: 18px;
 
-      text-align: center;
+  color: rgba(255,255,255,0.08);
 
-      padding: 38px 32px;
+  transform: rotate(14deg);
 
-      background: rgba(20, 20, 20, 0.58);
+}
 
-      border: 1px solid rgba(255,255,255,0.08);
 
-      border-radius: 24px;
 
-      backdrop-filter: blur(10px);
+.hero {
 
-      -webkit-backdrop-filter: blur(10px);
+  position: relative;
 
-      box-shadow:
+  z-index: 2;
 
-        0 0 0 1px rgba(255,255,255,0.02) inset,
+  max-width: 950px;
 
-        0 10px 40px rgba(0,0,0,0.55),
+  padding: 40px 30px;
 
-        0 0 35px rgba(255,0,0,0.10);
+  background: rgba(0, 0, 0, 0.42);
 
-    }
+  border: 1px solid rgba(255, 255, 255, 0.08);
 
+  border-radius: 24px;
 
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 
-    .logo {
+  backdrop-filter: blur(4px);
 
-      width: 180px;
+}
 
-      max-width: 80%;
 
-      margin-bottom: 18px;
 
-    }
+.logo {
 
+  width: 180px;
 
+  max-width: 80%;
 
-    .top-badge {
+  height: auto;
 
-      display: inline-block;
+  margin: 0 auto 18px;
 
-      padding: 8px 18px;
+  display: block;
 
-      border-radius: 999px;
+}
 
-      border: 1px solid rgba(255, 65, 65, 0.5);
 
-      background: rgba(255, 0, 0, 0.08);
 
-      color: #ff4a4a;
+.hero-badge {
 
-      font-size: 12px;
+  display: inline-block;
 
-      font-weight: 700;
+  margin-bottom: 20px;
 
-      letter-spacing: 1.6px;
+  padding: 8px 16px;
 
-      text-transform: uppercase;
+  border-radius: 999px;
 
-      margin-bottom: 18px;
+  background: rgba(255, 255, 255, 0.05);
 
-    }
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
+  color: #ff5a5a;
 
+  font-size: 0.9rem;
 
-    h1 {
+  font-weight: bold;
 
-      font-size: 60px;
+  letter-spacing: 1px;
 
-      line-height: 1;
+  text-transform: uppercase;
 
-      font-weight: 900;
+}
 
-      letter-spacing: 2px;
 
-      margin-bottom: 14px;
 
-      color: #ffffff;
+h1 {
 
-      text-shadow: 0 0 20px rgba(255,255,255,0.10);
+  font-size: 4.5rem;
 
-    }
+  line-height: 1.02;
 
+  text-transform: uppercase;
 
+  letter-spacing: 2px;
 
-    .subline {
+  margin-bottom: 14px;
 
-      color: #ff3b3b;
+  text-shadow: 0 0 22px rgba(255, 0, 0, 0.25);
 
-      font-size: 22px;
+}
 
-      font-weight: 700;
 
-      margin-bottom: 18px;
 
-    }
+.hero-tagline {
 
+  font-size: 1.2rem;
 
+  font-weight: bold;
 
-    .desc {
+  color: #ff4d4d;
 
-      max-width: 700px;
+  margin-bottom: 16px;
 
-      margin: 0 auto 26px;
+}
 
-      font-size: 18px;
 
-      line-height: 1.7;
 
-      color: rgba(255,255,255,0.92);
+.hero-text {
 
-    }
+  max-width: 760px;
 
+  margin: 0 auto;
 
+  font-size: 1.08rem;
 
-    .info-grid {
+  color: #dddddd;
 
-      display: grid;
+}
 
-      grid-template-columns: 1fr 1fr;
 
-      gap: 18px;
 
-      margin-top: 10px;
+.hero-suits {
 
-      text-align: left;
+  margin-top: 26px;
 
-    }
+  font-size: 1.9rem;
 
+  letter-spacing: 16px;
 
+  color: #ff4d4d;
 
-    .info-box {
+  text-shadow: 0 0 14px rgba(255, 0, 0, 0.25);
 
-      background: rgba(255,255,255,0.03);
+}
 
-      border: 1px solid rgba(255,255,255,0.06);
 
-      border-radius: 18px;
 
-      padding: 20px;
+nav {
 
-    }
+  position: sticky;
 
+  top: 0;
 
+  z-index: 1000;
 
-    .info-box h2 {
+  background: rgba(8, 8, 8, 0.96);
 
-      font-size: 20px;
+  border-bottom: 1px solid rgba(255, 0, 0, 0.22);
 
-      color: #ff3b3b;
+  backdrop-filter: blur(8px);
 
-      margin-bottom: 12px;
+}
 
-    }
 
 
+nav ul {
 
-    .info-box p,
+  list-style: none;
 
-    .info-box li {
+  display: flex;
 
-      font-size: 17px;
+  justify-content: center;
 
-      line-height: 1.6;
+  flex-wrap: wrap;
 
-      color: rgba(255,255,255,0.92);
+  gap: 34px;
 
-    }
+  padding: 18px 20px;
 
+}
 
 
-    .info-box ul {
 
-      list-style: none;
+nav a {
 
-      padding-left: 0;
+  color: white;
 
-    }
+  text-decoration: none;
 
+  font-weight: bold;
 
+  font-size: 0.98rem;
 
-    .info-box li {
+  letter-spacing: 0.5px;
 
-      margin-bottom: 10px;
+  transition: 0.25s ease;
 
-    }
+}
 
 
 
-    .highlight {
+nav a:hover {
 
-      color: #ff3b3b;
+  color: #ff5a5a;
 
-      font-weight: 700;
+}
 
-    }
 
 
+main {
 
-    .bottom-row {
+  max-width: 1180px;
 
-      margin-top: 24px;
+  margin: 0 auto;
 
-      display: grid;
+  padding: 70px 20px 30px;
 
-      grid-template-columns: 1fr 1fr 1fr;
+}
 
-      gap: 18px;
 
-    }
 
+section {
 
+  margin-bottom: 36px;
 
-    .stat-box {
+}
 
-      background: rgba(255,255,255,0.03);
 
-      border: 1px solid rgba(255,255,255,0.06);
 
-      border-radius: 18px;
+.card {
 
-      padding: 20px;
+  background: linear-gradient(180deg, rgba(22,22,22,0.96), rgba(12,12,12,0.98));
 
-    }
+  border: 1px solid rgba(255, 0, 0, 0.2);
 
+  border-radius: 22px;
 
+  padding: 38px 30px;
 
-    .stat-title {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 
-      color: #ff3b3b;
+}
 
-      font-size: 16px;
 
-      font-weight: 700;
 
-      margin-bottom: 10px;
+.section-title {
 
-      text-transform: uppercase;
+  text-align: center;
 
-      letter-spacing: 1px;
+  text-transform: uppercase;
 
-    }
+  letter-spacing: 1px;
 
+  font-size: 2rem;
 
+  margin-bottom: 16px;
 
-    .stat-value {
+}
 
-      font-size: 30px;
 
-      font-weight: 800;
 
-      color: #fff;
+.section-text {
 
-    }
+  max-width: 860px;
 
+  margin: 0 auto;
 
+  text-align: center;
 
-    .social {
+  color: #d4d4d4;
 
-      margin-top: 24px;
+  font-size: 1.02rem;
 
-      font-size: 18px;
+}
 
-      color: #ff3b3b;
 
-      font-weight: 700;
 
-    }
+.divider {
 
+  width: 90px;
 
+  height: 3px;
 
-    .suits-row {
+  margin: 18px auto 0;
 
-      margin-top: 22px;
+  border-radius: 999px;
 
-      font-size: 24px;
+  background: #b30000;
 
-      letter-spacing: 16px;
+}
 
-      color: #ff3b3b;
 
-      text-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
 
-    }
+.schedule-grid {
 
+  display: grid;
 
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    .bottom-bar {
+  gap: 22px;
 
-      position: fixed;
+  margin-top: 30px;
 
-      bottom: 0;
+}
 
-      left: 0;
 
-      width: 100%;
 
-      height: 6px;
+.schedule-item {
 
-      background: linear-gradient(to right, #ffffff, #ff2a2a, #ffffff);
+  position: relative;
 
-      box-shadow: 0 0 14px rgba(255, 42, 42, 0.7);
+  overflow: hidden;
 
-    }
+  border-radius: 18px;
 
+  padding: 28px 22px;
 
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
 
-    @media (max-width: 900px) {
+  border: 1px solid rgba(255, 0, 0, 0.24);
 
-      h1 {
+}
 
-        font-size: 42px;
 
-      }
 
+.schedule-item::before {
 
+  content: "";
 
-      .subline {
+  position: absolute;
 
-        font-size: 18px;
+  inset: 0;
 
-      }
+  background: linear-gradient(135deg, rgba(255,0,0,0.08), transparent 48%);
 
+  pointer-events: none;
 
+}
 
-      .desc {
 
-        font-size: 16px;
 
-      }
+.day {
 
+  position: relative;
 
+  z-index: 1;
 
-      .card {
+  font-size: 1.4rem;
 
-        padding: 28px 20px;
+  font-weight: bold;
 
-      }
+  margin-bottom: 10px;
 
+  color: #ffffff;
 
+}
 
-      .info-grid,
 
-      .bottom-row {
 
-        grid-template-columns: 1fr;
+.game {
 
-      }
+  position: relative;
 
-    }
+  z-index: 1;
 
+  font-size: 1.05rem;
 
+  color: #ff5a5a;
 
-    @media (max-width: 600px) {
+  font-weight: bold;
 
-      h1 {
+  margin-bottom: 8px;
 
-        font-size: 32px;
+}
 
-      }
 
 
+.time {
 
-      .top-badge {
+  position: relative;
 
-        font-size: 10px;
+  z-index: 1;
 
-        letter-spacing: 1.2px;
+  color: #ececec;
 
-      }
+  font-size: 1rem;
 
+}
 
 
-      .subline {
 
-        font-size: 16px;
+.details {
 
-      }
+  position: relative;
 
+  z-index: 1;
 
+  color: #cfcfcf;
 
-      .desc,
+  font-size: 0.95rem;
 
-      .info-box p,
+  margin-top: 8px;
 
-      .info-box li,
+}
 
-      .social {
 
-        font-size: 15px;
 
-      }
+.info-grid {
 
+  display: grid;
 
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-      .stat-value {
+  gap: 22px;
 
-        font-size: 24px;
+  margin-top: 28px;
 
-      }
+}
 
 
 
-      .suits-row {
+.info-box {
 
-        font-size: 22px;
+  background: rgba(255,255,255,0.02);
 
-        letter-spacing: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
 
-      }
+  border-radius: 18px;
 
-    }
+  padding: 26px 22px;
 
-  </style>
+  text-align: center;
+
+}
+
+
+
+.info-box h3 {
+
+  color: #ff5a5a;
+
+  margin-bottom: 10px;
+
+  font-size: 1.1rem;
+
+}
+
+
+
+.info-box p {
+
+  color: #d9d9d9;
+
+  font-size: 0.97rem;
+
+}
+
+
+
+footer {
+
+  margin-top: 40px;
+
+  padding: 32px 20px 45px;
+
+  text-align: center;
+
+  color: #bdbdbd;
+
+  border-top: 1px solid rgba(255, 0, 0, 0.18);
+
+  background: rgba(0, 0, 0, 0.35);
+
+}
+
+
+
+footer h3 {
+
+  color: white;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+footer a {
+
+  color: #ff5a5a;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+}
+
+
+
+footer a:hover {
+
+  text-decoration: underline;
+
+}
+
+
+
+@media (max-width: 950px) {
+
+  h1 {
+
+    font-size: 3.2rem;
+
+  }
+
+
+
+  .schedule-grid,
+
+  .info-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}
+
+
+
+@media (max-width: 560px) {
+
+  .hero {
+
+    padding: 28px 18px;
+
+  }
+
+
+
+  h1 {
+
+    font-size: 2.35rem;
+
+  }
+
+
+
+  .hero-tagline {
+
+    font-size: 1rem;
+
+  }
+
+
+
+  .hero-text {
+
+    font-size: 0.98rem;
+
+  }
+
+
+
+  .hero-suits {
+
+    font-size: 1.5rem;
+
+    letter-spacing: 10px;
+
+  }
+
+
+
+  nav ul {
+
+    gap: 18px;
+
+  }
+
+
+
+  .card {
+
+    padding: 28px 18px;
+
+  }
+
+}
+
+</style>
 
 </head>
 
@@ -538,45 +706,155 @@
 
 
 
-  <section class="hero">
+<header>
 
-    <div class="floating-suit suit1">♠</div>
+  <div class="hero">
 
-    <div class="floating-suit suit2">♣</div>
+    <img src="logo.png" alt="Motor Head Reds Logo" class="logo">
 
-    <div class="floating-suit suit3">♦</div>
+    <div class="hero-badge">Motor Head Reds Poker Club</div>
 
-    <div class="floating-suit suit4">♣</div>
+    <h1>Motor Head Reds</h1>
 
-    <div class="floating-suit suit5">♦</div>
+    <div class="hero-tagline">Low Stakes Poker • Weekly Games • Real Competition</div>
 
-    <div class="floating-suit suit6">♥</div>
+    <p class="hero-text">
+
+      Built for players who want a strong poker atmosphere, steady weekly action,
+
+      and a clean professional poker club feel without the high stakes pressure.
+
+    </p>
+
+    <div class="hero-suits">♠ ♥ ♦ ♣</div>
+
+  </div>
+
+</header>
 
 
+
+<nav>
+
+  <ul>
+
+    <li><a href="#about">About</a></li>
+
+    <li><a href="#schedule">Schedule</a></li>
+
+    <li><a href="#club">Club Info</a></li>
+
+    <li><a href="#contact">Contact</a></li>
+
+  </ul>
+
+</nav>
+
+
+
+<main>
+
+  <section id="about">
 
     <div class="card">
 
-      <img src="logo.png" alt="Motor Head Reds Logo" class="logo">
+      <h2 class="section-title">About The Club</h2>
 
+      <p class="section-text">
 
+        Motor Head Reds is a poker club built around low stakes games, competitive play,
 
-      <div class="top-badge">Motor Head Reds Poker Club</div>
+        and a reliable weekly schedule. The goal is simple: good action, strong atmosphere,
 
-      <h1>MOTOR HEAD REDS</h1>
-
-
-
-      <div class="subline">Low Stakes Poker • Weekly Games • Real Competition</div>
-
-
-
-      <p class="desc">
-
-        Built for players who want a strong poker atmosphere, steady weekly action,
-
-        and a clean professional poker club feel without the high stakes pressure.
+        and a setup that feels more professional than an ordinary home game.
 
       </p>
+
+      <div class="divider"></div>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="schedule">
+
+    <div class="card">
+
+      <h2 class="section-title">Weekly Schedule</h2>
+
+
+
+      <div class="schedule-grid">
+
+        <div class="schedule-item">
+
+          <div class="day">Monday</div>
+
+          <div class="game">$100 Freeze Out Tournament</div>
+
+          <div class="time">Starts at 6:00 PM</div>
+
+          <div class="details">60,000 chips • 15 minute blinds • Player confirmation required</div>
+
+        </div>
+
+
+
+        <div class="schedule-item">
+
+          <div class="day">Wednesday</div>
+
+          <div class="game">Sit & Go Hold'em + Omaha</div>
+
+          <div class="time">Starts at 6:00 PM</div>
+
+          <div class="details">(2) $20 buy-in / $20 re-buy Texas Hold'em tournaments • 4,000 chips • 10 minute blinds • (1) $20 buy-in / $20 re-buy Omaha tournament</div>
+
+        </div>
+
+
+
+        <div class="schedule-item">
+
+          <div class="day">Friday</div>
+
+          <div class="game">1/2 No Limit Texas Hold'em</div>
+
+          <div class="time">Starts at 6:00 PM</div>
+
+          <div class="details">Live action cash game</div>
+
+        </div>
+
+
+
+        <div class="schedule-item">
+
+          <div class="day">Saturday</div>
+
+          <div class="game">1/2 No Limit Texas Hold'em</div>
+
+          <div class="time">Starts at 6:00 PM</div>
+
+          <div class="details">Live action cash game</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="club">
+
+    <div class="card">
+
+      <h2 class="section-title">Club Info</h2>
 
 
 
@@ -584,7 +862,7 @@
 
         <div class="info-box">
 
-          <h2>Location</h2>
+          <h3>Location</h3>
 
           <p>33 Quinn Road<br>West Alexandria, Ohio</p>
 
@@ -594,29 +872,9 @@
 
         <div class="info-box">
 
-          <h2>Contact</h2>
+          <h3>Current Bad Beat Pot</h3>
 
-          <p>Phone: 937-839-7158</p>
-
-        </div>
-
-
-
-        <div class="info-box">
-
-          <h2>Weekly Schedule</h2>
-
-          <ul>
-
-            <li><span class="highlight">Monday:</span> $100 Freeze Out Tournament</li>
-
-            <li><span class="highlight">Wednesday:</span> Sit & Go Hold'em + Omaha</li>
-
-            <li><span class="highlight">Friday:</span> 1/2 No Limit Texas Hold'em</li>
-
-            <li><span class="highlight">Saturday:</span> 1/2 No Limit Texas Hold'em</li>
-
-          </ul>
+          <p>$4500</p>
 
         </div>
 
@@ -624,71 +882,35 @@
 
         <div class="info-box">
 
-          <h2>Game Details</h2>
+          <h3>Sponsor A Game</h3>
 
-          <ul>
-
-            <li><span class="highlight">Start Time:</span> 6 PM</li>
-
-            <li><span class="highlight">Bad Beat Pot:</span> $4500</li>
-
-            <li><span class="highlight">Sponsor Bonus:</span> $25 Freeplay</li>
-
-          </ul>
+          <p>Get $25 freeplay by inviting your friends and setting up your game. Contact for more info.</p>
 
         </div>
 
       </div>
-
-
-
-      <div class="bottom-row">
-
-        <div class="stat-box">
-
-          <div class="stat-title">Monday Tournament</div>
-
-          <div class="stat-value">$100</div>
-
-        </div>
-
-
-
-        <div class="stat-box">
-
-          <div class="stat-title">Action Starts</div>
-
-          <div class="stat-value">6 PM</div>
-
-        </div>
-
-
-
-        <div class="stat-box">
-
-          <div class="stat-title">Bad Beat Pot</div>
-
-          <div class="stat-value">$4500</div>
-
-        </div>
-
-      </div>
-
-
-
-      <div class="social">Follow us on Facebook and WhatsApp</div>
-
-
-
-      <div class="suits-row">♠ ♥ ♦ ♣</div>
 
     </div>
 
   </section>
 
+</main>
 
 
-  <div class="bottom-bar"></div>
+
+<footer id="contact">
+
+  <h3>Contact Motor Head Reds</h3>
+
+  <p>Phone: <a href="tel:9378397158">(937) 839-7158</a></p>
+
+  <p>Address: 33 Quinn Road, West Alexandria, Ohio</p>
+
+  <p>Follow us on Facebook and WhatsApp</p>
+
+  <p>© 2026 Motor Head Reds. All rights reserved.</p>
+
+</footer>
 
 
 
